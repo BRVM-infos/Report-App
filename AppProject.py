@@ -11,7 +11,7 @@ def load_data(url):
         response = requests.get(url)
         response.raise_for_status()  # Vérifier les erreurs de requête
         csv_content = response.content
-        df = pd.read_csv(pd.compat.StringIO(csv_content.decode('utf-8')))
+        df = pd.read_csv(pd.compat.StringIO(csv_content))
         return df
     except requests.exceptions.RequestException as e:
         st.error(f"Erreur lors de la requête HTTP : {e}")
