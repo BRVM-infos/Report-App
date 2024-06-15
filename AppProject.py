@@ -35,7 +35,7 @@ cols = st.columns(len(companies))
 selected_company = st.session_state.get('selected_company', companies[0])
 
 st.button(companies[0])
-st.session_state['selected_company'] = company
+st.session_state['selected_company'] = companies[0]
 elected_company = companies[0]
 logo_url = data[data['Ticket'] == companies[0]]['Profile.Images'].values[0]
 st.image(logo_url, width=100)
