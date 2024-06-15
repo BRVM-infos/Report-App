@@ -4,7 +4,7 @@ import pandas as pd
 import streamlit as st
 
 # Get the path to the CSV file on Google Drive
-csv_path = "/content/BRVM"
+#csv_path = "/content/BRVM"
 
 # Read the CSV file into a Pandas DataFrame
 df = pd.read_csv(csv_path)
