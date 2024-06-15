@@ -14,7 +14,7 @@ def load_data(url):
         df = pd.read_csv(pd.compat.StringIO(csv_content.decode('utf-8')))
         return df
 
-st.dataframe(df)
+
 
    
 
