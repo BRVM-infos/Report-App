@@ -35,7 +35,7 @@ selected_company = st.session_state.get('selected_company', companies[0])
     # this loop display each company logo once and allow to store eacht company Ticket once
 for i, company in enumerate(companies):
         with cols[i]:
-            if st.button(company):
+            if st.button(company, key=f"button_{i}"):
                 st.session_state['selected_company'] = company
                 selected_company = company
             logo_url = data[data['Ticket'] == company]['Profile.Images'].values[0]
