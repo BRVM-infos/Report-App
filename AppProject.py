@@ -12,5 +12,4 @@ df = pd.read_csv("BRVM.csv")
 st.write('Voici contenu du fichier CSV :')
 st.dataframe(df)
 st.bar_chart(df, x="Date", y="Dividende")
-
-
+st.line_chart(df, x="Date", y="Dividende")
