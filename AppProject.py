@@ -7,7 +7,7 @@ import streamlit as st
 #csv_path = "/content/BRVM"
 
 # Read the CSV file into a Pandas DataFrame
-df = pd.read_csv(BRVM)
+df = pd.read_csv(BRVM_csv)
 
 # Print the DataFrame
 #df.head()
