@@ -36,8 +36,8 @@ selected_company = st.session_state.get('selected_company', companies[0])
 
 st.button(companies[0])
 st.session_state['selected_company'] = company
-elected_company = company
-logo_url = data[data['Ticket'] == company]['Profile.Images'].values[0]
+elected_company = companies[0]
+logo_url = data[data['Ticket'] == companies[0]]['Profile.Images'].values[0]
 st.image(logo_url, width=100)
 
 st.write(f"## Données pour {selected_company}")
