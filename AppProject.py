@@ -3,8 +3,7 @@
 import pandas as pd
 import streamlit as st
 import requests
-import matplotlib.pyplot as plt
-import numpy as np
+
 # Get the path to the CSV file on Google Drive
 #csv_path = "/content/BRVM"
 st.title('Mon Application Streamlit')
