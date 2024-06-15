@@ -59,3 +59,4 @@ def main():
 
         st.pyplot(create_bar_chart(company_data['Dividende']))
    
+main()
