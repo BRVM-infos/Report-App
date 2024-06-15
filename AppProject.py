@@ -24,18 +24,7 @@ def create_bar_chart(dividendes):
     ax.set_title('Dividende en FCFA')
     return fig
 
-# Créer le graphique en ligne pour le bénéfice net
-def create_line_chart(resultat_net):
-    years = list(resultat_net.keys())
-    values = list(resultat_net.values())
 
-    fig, ax = plt.subplots()
-    ax.plot(years, values, marker='o', color='cyan')
-    ax.set_xlabel('Année')
-    ax.set_ylabel('Bénéfice Net (Million en FCFA)')
-    ax.set_title('Bénéfice Net (Million en FCFA)')
-    return fig
-# Interface utilisateur
 def main():
     st.title('Analyse Financière des Entreprises')
     st.markdown('<style>body{background-color: lightgrey;}</style>', unsafe_allow_html=True)
@@ -61,8 +50,5 @@ def main():
   #Store each company Ticke once
     company_data = data[data['Ticket'] == selected_company].iloc[0]
 
-    col1, col2 = st.columns(2)
-    with col1:
         st.pyplot(create_bar_chart(company_data['Dividende']))
-    with col2:
-        st.pyplot(create_line_chart(company_data['R\u00e9sultat net']))
+   
