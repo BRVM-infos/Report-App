@@ -24,3 +24,23 @@ def create_bar_chart(dividendes):
     ax.set_ylabel('Dividende en FCFA')
     ax.set_title('Dividende en FCFA')
     return fig
+data = df
+companies = data['Ticket'].tolist()
+
+st.write("### Sélectionnez une entreprise :")
+cols = st.columns(len(companies))
+
+selected_company = st.session_state.get('selected_company', companies[0])
+
+    # this loop display each company logo once and allow to store eacht company Ticket once
+for i, company in enumerate(companies):
+        with cols[i]:
+            if st.button(company):
+                st.session_state['selected_company'] = company
+                selected_company = company
+            logo_url = data[data['Ticket'] == company]['Logo'].values[0]
+            st.image(logo_url, width=100)
+
+st.write(f"## Données pour {selected_company}")
+  #Store each company Ticke once
+company_data = data[data['Ticket'] == selected_company].iloc[0]
