@@ -5,7 +5,7 @@ import streamlit as st
 import requests
 # Get the path to the CSV file on Google Drive
 #csv_path = "/content/BRVM"
-url_csv = "https://github.com/BRVM-infos/Report-App/blob/main/BRVM.csv"
+csv_url = "https://github.com/BRVM-infos/Report-App/blob/main/BRVM.csv"
 def load_data(url):
     try:
         response = requests.get(url)
