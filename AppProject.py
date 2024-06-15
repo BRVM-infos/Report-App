@@ -33,5 +33,4 @@ st.image(logo_url, width=100)
 
 st.write(f"## Données pour {selected_company}")
   #Store each company Ticke once
-company_data = data[data['Ticket'] == selected_company].iloc[0]
 
