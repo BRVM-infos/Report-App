@@ -6,4 +6,4 @@ import requests
 # Get the path to the CSV file on Google Drive
 #csv_path = "/content/BRVM"
 csv_url = "https://github.com/BRVM-infos/Report-App/blob/main/BRVM.csv"
-df = pd.read_csv(csv_url, index_col=0)
+df = pd.read_csv(csv_url)
