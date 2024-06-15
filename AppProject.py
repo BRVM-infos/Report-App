@@ -10,6 +10,9 @@ import requests
 st.title('Mon Application Streamlit')
 st.write('Chargement des données depuis GitHub...')
 df = pd.read_csv("BRVM.csv")
-st.write('Voici les premières lignes du fichier CSV :')
+st.write('Voici contenu du fichier CSV :')
 st.dataframe(df)
+
+st.bar_chart(df, x="Date", y="Dividende")
+
 
