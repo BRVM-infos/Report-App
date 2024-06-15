@@ -44,3 +44,5 @@ for i, company in enumerate(companies):
 st.write(f"## Données pour {selected_company}")
   #Store each company Ticke once
 company_data = data[data['Ticket'] == selected_company].iloc[0]
+
+st.pyplot(create_bar_chart(company_data['Dividende']))
