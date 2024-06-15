@@ -8,7 +8,7 @@ import streamlit as st
 
 
 # Read the CSV file into a Pandas DataFrame
-df = pd.read_csv('BRVM_csv', sep = ',')
+df = pd.read_csv('BRVM_csv')
 
 # Print the DataFrame
 #df.head()
