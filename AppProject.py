@@ -5,8 +5,7 @@ import streamlit as st
 
 # Get the path to the CSV file on Google Drive
 #csv_path = "/content/BRVM"
-url = 'https://github.com/BRVM-infos/Report-App/blob/main/BRVM.csv'
-df = pd.read_csv(url, index_col=0)
+
 
 # Read the CSV file into a Pandas DataFrame
 df = pd.read_csv('BRVM_csv', sep = ',')
@@ -19,7 +18,7 @@ def create_bar_chart(dividendes):
     values = list(dividendes.values())
 
     fig, ax = plt.subplots()
-    ax.bar(Date, values, color=['brown', 'orange', 'yellow', 'purple', 'magenta'])
+    ax.bar(years, values, color=['brown', 'orange', 'yellow', 'purple', 'magenta'])
     ax.set_xlabel('Année')
     ax.set_ylabel('Dividende en FCFA')
     ax.set_title('Dividende en FCFA')
@@ -31,7 +30,7 @@ def create_line_chart(resultat_net):
     values = list(resultat_net.values())
 
     fig, ax = plt.subplots()
-    ax.plot(Date, values, marker='o', color='cyan')
+    ax.plot(years, values, marker='o', color='cyan')
     ax.set_xlabel('Année')
     ax.set_ylabel('Bénéfice Net (Million en FCFA)')
     ax.set_title('Bénéfice Net (Million en FCFA)')
