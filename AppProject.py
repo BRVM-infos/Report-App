@@ -33,4 +33,7 @@ st.image(logo_url, width=100)
 
 st.write(f"## Données pour {selected_company}")
   #Store each company Ticke once
+df2 = pd.read_csv("BRVM")
+st.write('Voici contenu du fichier CSV :')
+st.dataframe(df2)
 
