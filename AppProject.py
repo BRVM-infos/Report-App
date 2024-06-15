@@ -4,7 +4,7 @@ import pandas as pd
 import streamlit as st
 import requests
 import numpy as np
-#import matplotlib.pyplot as plt
+import matplotlib.pyplot as plt
 
 # Get the path to the CSV file on Google Drive
 #csv_path = "/content/BRVM"
