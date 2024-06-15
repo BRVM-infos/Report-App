@@ -38,7 +38,7 @@ for i, company in enumerate(companies):
             if st.button(company):
                 st.session_state['selected_company'] = company
                 selected_company = company
-            logo_url = data[data['Ticket'] == company]['Logo'].values[0]
+            logo_url = data[data['Ticket'] == company]['Profile.Images'].values[0]
             st.image(logo_url, width=100)
 
 st.write(f"## Données pour {selected_company}")
