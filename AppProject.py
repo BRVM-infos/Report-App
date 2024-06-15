@@ -5,6 +5,8 @@ import streamlit as st
 
 # Get the path to the CSV file on Google Drive
 #csv_path = "/content/BRVM"
+url = 'https://raw.githubusercontent.com/lukes/ISO-3166-Countries-with-Regional-Codes/master/all/all.csv'
+df = pd.read_csv(url, index_col=0)
 
 # Read the CSV file into a Pandas DataFrame
 df = pd.read_csv('BRVM_csv', sep = ',')
