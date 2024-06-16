@@ -1,0 +1,5 @@
+plotly
+matplotlib
+pandas
+streamlit
+# Add other dependencies here
