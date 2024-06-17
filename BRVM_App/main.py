@@ -114,63 +114,48 @@ if selected_country:
     companies = df_main[df_main['Pays'] == selected_country]['Company_Name'].unique()
     selected_company = st.sidebar.selectbox('Entreprises' , companies)
 
-    # Metric card
-    cart_pays=  df_main[df_main['Company_Name'] == selected_company]['Pays'].unique()
-    cart_ceo =  df_main[df_main['Company_Name'] == selected_company]['Profile_Dirigeants_'].unique()
-    cart_val =  df_main[df_main['Company_Name'] == selected_company]['Profile_Valorisation_de_la_société_'].unique()
-    #***********Metric Card************
-   
-  
-    cols = st.columns(3)
-    with cols[0]:
-        ui.metric_card(title="Pays", content=f"{cart_pays[0]}", 
-                   key="card1")
-    with cols[1]:
-        ui.metric_card(title="CEO", content=f"{cart_ceo[0]}", 
-                   key="card2")
-    with cols[2]:
-        ui.metric_card(title="Valorisation de la société", content=f"{cart_val[0]}", 
-                   key="card3")
-    # Main content - Centered subheader
     st.markdown(f"""
                  <div class="title">  {selected_company}  </div> """,
                    unsafe_allow_html=True)
 
     if selected_company:
+        # Column Division
+        cols = st.columns([0.8, 0.2], gap='medium')
+        
         filtered_data = filter_data(df_main, selected_country, selected_company)
         
-        # Create columns for side-by-side charts
-        col1, col2 = st.columns(2)
-
-         # Plot line chart in the first column
-        with col1:
-            fig1 = plot_dividende(filtered_data, selected_company)
-            st.plotly_chart(fig1)
-
-        # Plot bar chart in the second column
-        with col2:
-            fig2 = plot_benefice(filtered_data, selected_company)
-            st.plotly_chart(fig2)
-        
-         # Create columns for side-by-side charts
-        stat, descrip = st.columns(2)
-
-         # metric of companys
-        with stat:
-         # Title of the section using the custom CSS class
-            st.markdown('<div class="section">Statistique</div>', unsafe_allow_html=True)
-
-            # Desciption of company
-        with descrip:
-             # Title os this section
-            st.markdown('<div class="section">Description</div>', unsafe_allow_html=True)
-            # Display description content
-            resume =  df_main[df_main['Company_Name'] == selected_company]['Description'].unique()[0]
-            st.markdown(f"""
-                 <div class="resume">  {resume}  </div> """,
-                   unsafe_allow_html=True)
-
+        with cols[0] :
             
+             # Create columns for side-by-side charts
+            col1, col2 = st.columns(2)
+
+            # Plot line chart in the first column
+            with col1:
+              fig1 = plot_dividende(filtered_data, selected_company)
+              st.plotly_chart(fig1)
+
+            # Plot bar chart in the second column
+            with col2:
+              fig2 = plot_benefice(filtered_data, selected_company)
+              st.plotly_chart(fig2)
+        
+        with cols[1] :
+                          #    metric card
+                cart_pays=  df_main[df_main['Company_Name'] == selected_company]['Pays'].unique()[0]
+                st.markdown(f"""
+                        <div class="pays">{cart_pays} </div> """,
+                          unsafe_allow_html=True)
+                with st.expander('A Propos', expanded=True):
+                
+                     # Display description content
+                     resume =  df_main[df_main['Company_Name'] == selected_company]['Description'].unique()[0]
+                     st.markdown(f"""
+                        <div class="resume">{resume} </div> """,
+                          unsafe_allow_html=True)
+           
+
 st.set_option('deprecation.showPyplotGlobalUse', False)
+
+
 
 
