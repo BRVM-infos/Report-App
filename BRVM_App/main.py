@@ -80,7 +80,7 @@ def plot_dividende(stock_data, company):
         name='Dividende'
     ))
     fig.update_layout(
-        title=f'Dividende en FCFA de : {company}',
+        title=f'Dividende en FCFA',
         xaxis_title='Date',
         yaxis_title='Prix FCFA',
         template='plotly_white'
@@ -96,7 +96,7 @@ def plot_benefice(stock_data, company):
         marker_color=colors
     ))
     fig.update_layout(
-        title=f'Bénéfice net de : {company}',
+        title=('text': f'Bénéfice net','xanchor': 'center'),
         xaxis_title='Date',
         yaxis_title='Volume',
         template='plotly_white'
