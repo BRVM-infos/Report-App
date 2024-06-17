@@ -96,7 +96,7 @@ def plot_benefice(stock_data, company):
         marker_color=colors
     ))
     fig.update_layout(
-        title={'text': 'Bénéfice net','xanchor': 'center'},
+        title= f'Bénéfice net',
         xaxis_title='Date',
         yaxis_title='Volume',
         template='plotly_white'
