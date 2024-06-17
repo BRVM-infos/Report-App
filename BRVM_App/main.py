@@ -98,7 +98,7 @@ def plot_benefice(stock_data, company):
     fig.update_layout(
         title= f'Bénéfice net',
         xaxis_title='Date',
-        yaxis_title='Volume',
+        yaxis_title='en Million',
         template='plotly_white'
     )
     return fig
