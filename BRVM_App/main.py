@@ -39,10 +39,6 @@ load_css('style.css')
 # Read csv file
 df_main = pd.read_csv('brvm_data.csv')
 
-#st.write(df_main)
-
-#*************Extract unique Ticket and company Name ********
-
 # Extract unique countries and companies
 country_uemoa = df_main['Pays'].unique()
 company = df_main['Company_Name'].unique()
@@ -59,16 +55,12 @@ for _, row in df_main.iterrows():
 # Convert sets to lists in the dictionary
 country = {key: list(value) for key, value in pays_company_dict.items()}
 
-
-
-
 #******************* Définir les fonction graphiques*************
 
 def filter_data(df, country, company):
     filtered_df = df[(df['Pays'] == country) & (df['Company_Name'] == company)]
     return filtered_df
-
-
+    
 def plot_dividende(stock_data, company):
     fig = go.Figure()
     fig.add_trace(go.Scatter(
@@ -76,7 +68,7 @@ def plot_dividende(stock_data, company):
         y=stock_data['Dividende'], 
         mode='lines+markers', 
         marker=dict(color='orange', size=20),  # Adjust marker size here
-        line=dict(color='blue'),  # Adjust line color if needed
+        line=dict(color='grey'),  # Adjust line color if needed
         name='Dividende'
     ))
     fig.update_layout(
