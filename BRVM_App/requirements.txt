@@ -3,4 +3,5 @@ matplotlib
 pandas
 streamlit
 streamlit_shadcn_ui
+os  
 # Add other dependencies here
