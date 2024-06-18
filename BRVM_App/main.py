@@ -15,7 +15,6 @@ st.set_page_config(
     page_icon= "🌍",
     layout="wide", 
     page_title= "BRVM",  
-    page_icon="icon.png", 
     initial_sidebar_state="expanded")
 
 #####################################   
