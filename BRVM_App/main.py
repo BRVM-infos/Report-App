@@ -15,7 +15,7 @@ st.set_page_config(
     page_icon= "🌍",
     layout="wide", 
     page_title= "BRVM",  
-    initial_sidebar_state="expanded"
+    initial_sidebar_state="expanded")
 
 #####################################   
 from streamlit_option_menu import option_menu
