@@ -90,10 +90,14 @@ def plot_dividende(stock_data, company):
         name='Dividende'
     ))
     fig.update_layout(
-        title=f'Dividende en FCFA',
+        #title=f'Dividende en FCFA ',
+        title = {'text': "Dividende net", 
+                            'font': {'color': 'lightgrey', 'size': 18} },
         xaxis_title='Date',
-        yaxis_title='FCFA',
-        template='plotly_white'
+        yaxis_title='Prix FCFA',
+        template='plotly_white',
+        plot_bgcolor='rgba(0, 0, 0, 0.1)',  # Plot area background color
+        paper_bgcolor='rgba(0, 0, 0, 0.1)' # Overall background color
     )
     return fig
 
@@ -106,10 +110,14 @@ def plot_benefice(stock_data, company):
         marker_color=colors
     ))
     fig.update_layout(
-        title= f'Bénéfice net',
+      #  title=f'Bénéfice net',
+       title = {'text': "Bénéfice net", 
+                            'font': {'color': 'lightgrey', 'size': 18} },
         xaxis_title='Date',
-        yaxis_title='Million FCFA',
-        template='plotly_white'
+        yaxis_title='Million Fcfa',
+        template='plotly_white',
+         plot_bgcolor='rgba(0, 0, 0, 0.1)',  # Plot area background color
+        paper_bgcolor='rgba(0, 0, 0, 0.1)' # Overall background color
     )
     return fig
 
