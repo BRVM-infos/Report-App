@@ -16,6 +16,24 @@ st.set_page_config(
     layout="wide", 
     page_title= "BRVM",
      initial_sidebar_state="expanded")
+####################################
+#st.header("BRVM") TO HIDDE FOOTER RUNNINF
+hide_st_style = """
+            <style>
+            #MainMenu {visibility: hidden;}
+            footer {visibility: hidden;}
+            header {visibility: hidden;}
+            </style>
+            """
+st.markdown(hide_st_style, unsafe_allow_html=True) 
+
+#####################################   
+from streamlit_option_menu import option_menu
+# horizontal Menu
+app = option_menu(None, ["Acceuil", "Tendances", "Dividende", 'Etats Financier', 'Contact'], 
+icons=['house', 'fire', "calculator-fill", 'graph-up-arrow', 'person-vcard-fill'], 
+menu_icon="cast", default_index=0, orientation="horizontal")
+#app
 
 #####################################
 # Set up css file via fucntion
