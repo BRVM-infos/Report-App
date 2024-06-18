@@ -14,9 +14,8 @@ import plotly.graph_objects as go
 st.set_page_config(
     page_icon= "🌍",
     layout="wide", 
-    page_title= "BRVM",
-     #page_icon="favicon.ico"  
-     initial_sidebar_state="expanded"
+    page_title= "BRVM",  
+    initial_sidebar_state="expanded"
 
 #####################################   
 from streamlit_option_menu import option_menu
