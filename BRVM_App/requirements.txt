@@ -4,6 +4,6 @@ pandas
 streamlit
 streamlit_shadcn_ui
 streamlit_option_menu
-streamlit.components.v1
+streamlit.components
 
 # Add other dependencies here
