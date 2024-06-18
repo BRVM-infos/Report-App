@@ -35,18 +35,7 @@ hide_st_style = """
             </style>
             """
 st.markdown(hide_st_style, unsafe_allow_html=True) 
- # Inject JavaScript to remove class attribute
-import streamlit.components.v1 as components
-components.html("""
-        <script>
-        document.addEventListener('DOMContentLoaded', (event) => {
-            let elements = document.getElementsByClassName('viewerBadge_link__qRIco');
-            for (let element of elements) {
-                element.removeAttribute('class');
-            }
-        });
-        </script>
-    """, height=0)
+ 
 #####################################
 # Set up css file via fucntion
 # Function to load CSS from a file and inject it into the app
