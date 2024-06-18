@@ -133,7 +133,7 @@ if selected_country:
     selected_company = st.sidebar.selectbox('Entreprises' , companies)
 
     st.markdown(f"""
-                 <div class="title">  {selected_company}  </div> """,
+                 <div class="pays">  {selected_company}  </div> """,
                    unsafe_allow_html=True)
 
     if selected_company:
