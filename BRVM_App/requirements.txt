@@ -3,5 +3,6 @@ matplotlib
 pandas
 streamlit
 streamlit_shadcn_ui
+streamlit_option_men
 
 # Add other dependencies here
