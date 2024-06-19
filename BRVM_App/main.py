@@ -12,7 +12,7 @@ import plotly.graph_objects as go
 ################################
 # Page configuration
 st.set_page_config(
-    #page_icon= "🌍",
+    page_icon= "🌍",
     layout="wide", 
     page_title= "BRVM",  
     initial_sidebar_state="expanded")
