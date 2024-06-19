@@ -2,4 +2,6 @@ plotly
 matplotlib
 pandas
 streamlit
+streamlit_shadcn_ui
+streamlit_option_menu
 # Add other dependencies here
