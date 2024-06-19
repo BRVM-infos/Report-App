@@ -21,7 +21,13 @@ st.set_page_config(
 
 ####################################
 #st.header("BRVM") TO HIDDE FOOTER RUNNINF
-
+hide_st_style = """
+            <style>
+            footer {visibility: hidden;}
+            header {visibility: hidden;}
+            </style>
+            """
+st.markdown(hide_st_style, unsafe_allow_html=True) 
 
 #####################################   
 from streamlit_option_menu import option_menu
