@@ -23,6 +23,7 @@ st.set_page_config(
 #st.header("BRVM") TO HIDDE FOOTER RUNNINF
 hide_st_style = """
             <style>
+            #MainMenu {visibility: hidden;
             footer {visibility: hidden;}
             header {visibility: hidden;}
             </style>
