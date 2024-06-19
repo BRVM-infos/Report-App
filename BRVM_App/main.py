@@ -26,10 +26,10 @@ menu_icon="cast", default_index=0, orientation="horizontal")
 #app
 
 ####################################
-#st.header("BRVM") TO HIDDE FOOTER RUNNINF
+#st.header("BRVM") TO HIDDE FOOTER RUNNINF    #MainMenu {visibility: hidden;}
 hide_st_style = """
             <style>
-            #MainMenu {visibility: hidden;}
+          
             footer {visibility: hidden;}
             header {visibility: hidden;}
             </style>
