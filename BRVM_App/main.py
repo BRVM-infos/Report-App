@@ -27,14 +27,7 @@ menu_icon="cast", default_index=0, orientation="horizontal")
 
 ####################################
 #st.header("BRVM") TO HIDDE FOOTER RUNNINF    #MainMenu {visibility: hidden;}
-hide_st_style = """
-            <style>
-            #MainMenu {visibility: hidden;}
-            footer {visibility: hidden;}
-            header {visibility: hidden;}
-            </style>
-            """
-st.markdown(hide_st_style, unsafe_allow_html=True) 
+
  
 #####################################
 # Set up css file via fucntion
