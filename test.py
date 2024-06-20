@@ -4,10 +4,8 @@ import plotly.graph_objects as go
 # Function to get the device type based on the screen width
 def get_device_type():
     width = st.sidebar.slider('Screen Width (px)', 300, 2000, 800)
-    if width < 600:
+    if width <1200:
         return 'mobile'
-    elif width < 1200:
-        return 'tablet'
     else:
         return 'desktop'
 
@@ -16,9 +14,8 @@ device_type = get_device_type()
 
 # Set width and height based on device type
 if device_type == 'mobile':
-    plot_width, plot_height = 300, 400
-elif device_type == 'tablet':
-    plot_width, plot_height = 600, 500
+    plot_width, plot_height = 800, 800
+
 else:
     plot_width, plot_height = 800, 600
 
