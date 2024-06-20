@@ -1,6 +1,13 @@
 import streamlit as st
 import plotly.graph_objects as go
 
+# Page configuration
+st.set_page_config(
+    page_icon= "🌍",
+    layout="wide", 
+    page_title= "BRVM",  
+    initial_sidebar_state="expanded")
+
 # Function to get the device type based on the screen width
 def get_device_type():
     width = st.sidebar.slider('Screen Width (px)', 300, 2000, 800)
