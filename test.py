@@ -21,7 +21,7 @@ device_type = get_device_type()
 
 # Set width and height based on device type
 if device_type == 'mobile':
-    plot_width, plot_height = 600, 600
+    plot_width, plot_height = 300, 300
 
 else:
     plot_width, plot_height = 800, 600
